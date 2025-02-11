@@ -7,9 +7,9 @@ def main():
     screwdriver = Product("Screwdriver", 90)
 
     print(hammer.get_id_product())
-    print(hammer.get_product_info())
     print(screwdriver.get_id_product())
-    print(screwdriver.get_product_info())
+    hammer.get_product_info()
+    screwdriver.get_product_info()
 
 
 

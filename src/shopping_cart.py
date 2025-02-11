@@ -1,5 +1,4 @@
 import uuid
-
 from src.product import Product
 
 
@@ -12,12 +11,13 @@ class ShoppingCart:
     def get_id_cart(self):
         return self.__id_cart
 
+    def view_cart(self):
+        return self.__cart
+
     # add product
     def add_product(self, product: Product):
         pass
 
-    def view_cart(self):
-        pass
 
     def calculate_total(self):
         pass

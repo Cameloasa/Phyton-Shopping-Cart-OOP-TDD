@@ -20,4 +20,4 @@ class Product:
                        f"   🆔 ID: {self.__id_product}\n" \
                        f"   🏷️ Namn: {self.__name}\n" \
                        f"   💰 Pris: {self.__price} SEK"
-        return info_product
+        print(info_product)
