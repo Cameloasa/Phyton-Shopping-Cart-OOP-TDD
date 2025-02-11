@@ -9,4 +9,4 @@ class Product:
         self.__price = price
 
     def get_info(self):
-        return {"id": self.__id, "name": self.__name, "price": self.__price}
+        pass
