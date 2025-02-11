@@ -16,7 +16,8 @@ class Product:
         return self.__id_product
 
     def get_product_info(self):
-        info_product = {"id": self.__id_product,
-                        "name": self.__name,
-                        "price": self.__price}
-        print(info_product)
+        info_product = f"📦 Produkt:\n" \
+                       f"   🆔 ID: {self.__id_product}\n" \
+                       f"   🏷️ Namn: {self.__name}\n" \
+                       f"   💰 Pris: {self.__price} SEK"
+        return info_product

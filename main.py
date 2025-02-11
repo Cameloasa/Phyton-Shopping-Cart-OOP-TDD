@@ -6,10 +6,11 @@ def main():
     hammer = Product("Hammer", 150)
     screwdriver = Product("Screwdriver", 90)
 
-    hammer.get_id_product()
-    hammer.get_product_info()
-    screwdriver.get_product_info()
-    screwdriver.get_id_product()
+    print(hammer.get_id_product())
+    print(hammer.get_product_info())
+    print(screwdriver.get_id_product())
+    print(screwdriver.get_product_info())
+
 
 
 
