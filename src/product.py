@@ -8,7 +8,7 @@ class Product:
             raise ValueError('Name cannot be empty')
         if price < 0:
             raise ValueError('Price must be non-negative')
-        self.__id_product = str(uuid.uuid4())
+        self.__id_product = str(uuid.uuid4())[-4:]
         self.__name = name
         self.__price = price
 
@@ -19,4 +19,4 @@ class Product:
         info_product = {"id": self.__id_product,
                         "name": self.__name,
                         "price": self.__price}
-        return info_product
+        print(info_product)
