@@ -13,3 +13,12 @@ class Order:
 
     def get_order_info(self):
         pass
+
+    def confirm_order(self):
+        pass
+
+    def cancel_order(self):
+        pass
+
+    def print_order_info(self):
+        pass
