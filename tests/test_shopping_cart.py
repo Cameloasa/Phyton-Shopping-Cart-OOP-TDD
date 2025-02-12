@@ -18,7 +18,6 @@ def test_add_product():
     product = Product("Hammer",150)
     cart.add_product(product)
 
-    print("Cart content:", cart.view_cart())
     assert len(cart.view_cart()) == 1
     assert cart.view_cart()[0]["name"] == "Hammer"
     assert cart.view_cart()[0]["price"] == 150
@@ -35,7 +34,6 @@ def test_view_cart():
     assert len(cart.view_cart()) == 1
     assert cart.view_cart()[0]["name"] == "Hammer"
     assert cart.view_cart()[0]["price"] == 150
-
 
 
 def test_calculate_total():
