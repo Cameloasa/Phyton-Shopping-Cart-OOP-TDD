@@ -11,7 +11,7 @@ def test_shopping_cart_unique_id():
 
 def test_view_empty_cart():
     cart = ShoppingCart()
-    assert cart.view_cart() == "Cart is empty"
+    assert cart.view_cart() == []
 
 def test_add_product():
     cart = ShoppingCart()
@@ -30,7 +30,12 @@ def test_add_invalid_product():
 
 def test_view_cart():
     cart = ShoppingCart()
-    assert cart.view_cart() == ["Hammer", 150]
+    product = Product("Hammer",150)
+    cart.add_product(product)
+    assert len(cart.view_cart()) == 1
+    assert cart.view_cart()[0]["name"] == "Hammer"
+    assert cart.view_cart()[0]["price"] == 150
+
 
 
 def test_calculate_total():
