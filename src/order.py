@@ -26,4 +26,14 @@ class Order:
         pass
 
     def print_order_info(self):
-        pass
+        print(f"🛒 Order ID: {self.__id_order}")
+        print(f"👤 Customer ID: {self.__customer_id}")
+
+        if not self.__cart:
+            print("🛍️ Your cart is empty.")
+        else:
+            print("🛍️ Your Cart:")
+            for product in self.__cart:
+                print(f"  - {product['name']} | Price: {product['price']} SEK")
+
+        print(f"💰 Total: {self.__total} SEK")

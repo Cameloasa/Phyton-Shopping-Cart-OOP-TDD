@@ -1,3 +1,4 @@
+from src.order import Order
 from src.product import Product
 from src.shopping_cart import ShoppingCart
 
@@ -19,6 +20,10 @@ def main():
     shopping_cart.add_product(screwdriver)
     #print(shopping_cart.view_cart())
     shopping_cart.print_cart_info()
+
+    # Create order
+    order = Order(shopping_cart,"1234")
+    order.print_order_info()
 
 
 
