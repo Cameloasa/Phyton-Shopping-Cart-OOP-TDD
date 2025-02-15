@@ -7,6 +7,7 @@ class Order:
         self.__cart = cart.view_cart()
         self.__total = cart.calculate_total()
         self.__customer_id = customer_id #hardcode
+        self.__status = "Pending"
 
     def get_id_order(self):
         return self.__id_order
@@ -19,11 +20,18 @@ class Order:
             "customer_id": self.__customer_id
         }
 
+    def get_status(self):
+        return self.__status
+
     def confirm_order(self):
-        pass
+        self.__status = "Confirmed"
+        return f"Order {self.__id_order} has been confirmed successfully."
 
     def cancel_order(self):
-        pass
+        if self.__status == "Confirmed":
+            return f"Order {self.__id_order} has already been confirmed and cannot be canceled."
+        self.__status = "Canceled"
+        return f"Order {self.__id_order} has been canceled."
 
     def print_order_info(self):
         print(f"🛒 Order ID: {self.__id_order}")
@@ -37,3 +45,4 @@ class Order:
                 print(f"  - {product['name']} | Price: {product['price']} SEK")
 
         print(f"💰 Total: {self.__total} SEK")
+

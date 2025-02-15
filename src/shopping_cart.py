@@ -21,7 +21,6 @@ class ShoppingCart:
         self.__cart.append(product)
 
 
-
     def calculate_total(self):
         return sum(product.get_product_info()['price'] for product in self.__cart)
 
