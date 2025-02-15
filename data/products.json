@@ -1,0 +1,12 @@
+[
+  {"id": "1a2b", "name": "Hammer", "price": 150},
+  {"id": "3c4d", "name": "Screwdriver", "price": 90},
+  {"id": "5e6f", "name": "Wrench", "price": 120},
+  {"id": "7g8h", "name": "Drill", "price": 350},
+  {"id": "9i0j", "name": "Saw", "price": 200},
+  {"id": "1k2l", "name": "Pliers", "price": 75},
+  {"id": "3m4n", "name": "Tape Measure", "price": 50},
+  {"id": "5o6p", "name": "Chisel Set", "price": 180},
+  {"id": "7q8r", "name": "Level", "price": 95},
+  {"id": "9s0t", "name": "Utility Knife", "price": 45}
+]
