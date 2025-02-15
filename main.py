@@ -1,32 +1,27 @@
 from src.order import Order
 from src.product import Product
 from src.shopping_cart import ShoppingCart
+import json
 
+def load_products_from_json(file_path):
+    with open(file_path, "r") as file:
+        data = json.load(file)
+        return [Product(item["name"], item["price"]) for item in data]
 
 def main():
 
-    # Create a product
-    hammer = Product("Hammer", 150)
-    screwdriver = Product("Screwdriver", 90)
+    # Load products from JSON
+    products = load_products_from_json("data/products.json")
 
-    hammer.print_product_info()
-    #print(hammer.get_product_info())
-    screwdriver.print_product_info()
-    #print(hammer.get_product_info())
-
-    # Create shopping cart
+    # Create shopping cart and add some products
     shopping_cart = ShoppingCart()
-    shopping_cart.add_product(hammer)
-    shopping_cart.add_product(screwdriver)
-    #print(shopping_cart.view_cart())
+    shopping_cart.add_product(products[0])  # Hammer
+    shopping_cart.add_product(products[1])  # Screwdriver
     shopping_cart.print_cart_info()
 
     # Create order
-    order = Order(shopping_cart,"1234")
+    order = Order(shopping_cart, "1234")
     order.print_order_info()
-
-
-
 
 
 
